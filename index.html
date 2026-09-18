@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sai Kumar Suvvada | Portfolio</title>
+    <title>Sai Kumar Suvvada | Aspiring IT Professional</title>
 
     <meta name="description"
-        content="Portfolio of Sai Kumar Suvvada - Aspiring IT Professional, ServiceNow and Web Development Learner">
+          content="Portfolio of Sai Kumar Suvvada - Aspiring IT Professional, ServiceNow and Web Development Learner.">
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,116 +25,90 @@
         <div class="orb orb3"></div>
     </div>
 
-    <!-- Particles -->
     <div id="particles"></div>
 
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-    <header class="navbar">
-
-        <a href="#home" class="logo">
-            <span>S</span>K
-        </a>
-
-        <nav>
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </nav>
+        <div class="logo">
+            <span>&lt;</span>SK<span>/&gt;</span>
+        </div>
 
         <button class="menu-btn" id="menuBtn">
             ☰
         </button>
 
-    </header>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
 
 
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-    <!-- ================= HERO ================= -->
+        <div class="hero-content reveal">
 
-    <section id="home" class="hero">
-
-        <div class="hero-content">
-
-            <div class="status">
-                <span></span>
-                Available for opportunities
-            </div>
-
-            <p class="intro">
-                Hello, I'm
+            <p class="hello">
+                👋 Hello, I'm
             </p>
 
             <h1>
                 Sai Kumar
-                <br>
                 <span>Suvvada</span>
             </h1>
 
             <h2>
-                I'm an
                 <span id="typing"></span>
+                <span class="cursor">|</span>
             </h2>
 
             <p class="hero-description">
-                Passionate about technology, web development and
-                ServiceNow. I enjoy transforming ideas into practical
-                projects while continuously learning new technologies.
+                Passionate about technology, web development and ServiceNow.
+                Currently building my skills and creating practical projects
+                while preparing for my career in IT.
             </p>
 
             <div class="hero-buttons">
 
                 <a href="#projects" class="btn primary-btn">
-                    Explore My Work
-                    <span>→</span>
+                    View My Work →
                 </a>
 
-                <a href="#contact" class="btn outline-btn">
-                    Let's Connect
+                <a href="d:\HTML\Portfolio\Sai_Kumar_Suvvada_Resume.pdf.pdf"
+                   download
+                   class="btn secondary-btn">
+                    📄 Download Resume
                 </a>
 
             </div>
 
-
-            <!-- Social Links -->
-
             <div class="social-links">
 
                 <a href="https://github.com/saikum441-rgb"
-                    target="_blank"
-                    aria-label="GitHub">
+                   target="_blank"
+                   title="GitHub">
                     GitHub
                 </a>
 
+                <!-- Replace this URL with your LinkedIn profile -->
+                <a href="www.linkedin.com/in/sai-kumar-suvvada-a54089373"
+                   target="_blank"
+                   title="LinkedIn">
+                    LinkedIn
+                </a>
+
                 <a href="mailto:saikum441@gmail.com"
-                    aria-label="Email">
+                   title="Email">
                     Email
                 </a>
 
@@ -140,179 +117,101 @@
         </div>
 
 
-        <!-- Hero Visual -->
+        <!-- PROFILE -->
+        <div class="hero-visual reveal">
 
-        <div class="hero-visual">
+            <div class="profile-container">
 
-            <div class="code-window">
+                <div class="profile-ring ring1"></div>
+                <div class="profile-ring ring2"></div>
 
-                <div class="window-header">
+                <div class="profile-image">
 
-                    <div class="window-buttons">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                    <!-- Add your photo as profile.jpg -->
+                    <img src="d:\HTML\Portfolio\profile.jpg.png"
+                         alt="Sai Kumar Suvvada"
+                         onerror="this.style.display='none'; document.querySelector('.profile-fallback').style.display='flex';">
 
-                    <p>portfolio.js</p>
-
-                </div>
-
-
-                <div class="code-content">
-
-                    <p>
-                        <span class="purple">const</span>
-                        developer
-                        <span class="white">=</span>
-                        <span class="cyan">{</span>
-                    </p>
-
-                    <p class="indent">
-                        name:
-                        <span class="green">
-                            "Sai Kumar"
-                        </span>,
-                    </p>
-
-                    <p class="indent">
-                        role:
-                        <span class="green">
-                            "IT Professional"
-                        </span>,
-                    </p>
-
-                    <p class="indent">
-                        skills:
-                        <span class="cyan">[</span>
-                    </p>
-
-                    <p class="indent2">
-                        <span class="green">"HTML"</span>,
-                    </p>
-
-                    <p class="indent2">
-                        <span class="green">"CSS"</span>,
-                    </p>
-
-                    <p class="indent2">
-                        <span class="green">"JavaScript"</span>,
-                    </p>
-
-                    <p class="indent2">
-                        <span class="green">"ServiceNow"</span>
-                    </p>
-
-                    <p class="indent">
-                        <span class="cyan">]</span>
-                    </p>
-
-                    <p>
-                        <span class="cyan">}</span>;
-                    </p>
-
-                    <p class="cursor">_</p>
-
-                </div>
-
-            </div>
-
-
-            <!-- Floating Cards -->
-
-            <div class="floating-card card-one">
-                <span>⚡</span>
-                Problem Solver
-            </div>
-
-            <div class="floating-card card-two">
-                <span>🚀</span>
-                Continuous Learner
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="section">
-
-        <div class="section-heading">
-
-            <p class="section-tag">
-                ABOUT ME
-            </p>
-
-            <h2>
-                Turning curiosity into
-                <span>skills</span>
-            </h2>
-
-            <p>
-                A little bit about my journey
-            </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-            <div class="about-image">
-
-                <div class="profile-glow">
-
-                    <div class="profile-circle">
+                    <div class="profile-fallback">
                         SK
                     </div>
 
                 </div>
 
+                <div class="floating-badge badge1">
+                    💻
+                    <span>Developer</span>
+                </div>
+
+                <div class="floating-badge badge2">
+                    ⚡
+                    <span>Learner</span>
+                </div>
+
             </div>
 
+        </div>
 
-            <div class="about-text">
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+
+        <div class="section-title reveal">
+            <p>GET TO KNOW ME</p>
+            <h2>About <span>Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text reveal">
 
                 <h3>
-                    Hi! I'm Sai Kumar 👋
+                    Building my future in <span>Technology</span> 🚀
                 </h3>
 
                 <p>
-                    I am an aspiring IT professional with a strong
-                    interest in technology and software development.
+                    I'm Sai Kumar Suvvada, an aspiring IT professional
+                    interested in web development, ServiceNow and
+                    technology.
                 </p>
 
                 <p>
-                    I have been learning HTML, CSS, JavaScript,
-                    Git, GitHub, SQL and ServiceNow through
-                    hands-on practice and projects.
+                    I enjoy learning new technologies and turning what I
+                    learn into practical projects. My current focus is
+                    strengthening my programming, web development,
+                    ServiceNow and Git/GitHub skills.
                 </p>
 
                 <p>
-                    I believe that consistent learning and practical
-                    experience are the keys to growing as a developer.
+                    I believe consistent learning and hands-on practice
+                    are the keys to building a strong career in IT.
                 </p>
 
+            </div>
 
-                <div class="about-stats">
 
-                    <div>
-                        <strong>6+</strong>
-                        <span>Technologies</span>
-                    </div>
+            <div class="about-stats reveal">
 
-                    <div>
-                        <strong>∞</strong>
-                        <span>Learning</span>
-                    </div>
+                <div class="stat-card">
+                    <strong>6+</strong>
+                    <span>Technologies Learning</span>
+                </div>
 
-                    <div>
-                        <strong>100%</strong>
-                        <span>Dedication</span>
-                    </div>
+                <div class="stat-card">
+                    <strong>100%</strong>
+                    <span>Learning Mindset</span>
+                </div>
 
+                <div class="stat-card">
+                    <strong>∞</strong>
+                    <span>Curiosity</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>🚀</strong>
+                    <span>Career Goal</span>
                 </div>
 
             </div>
@@ -322,155 +221,74 @@
     </section>
 
 
+    <!-- SKILLS -->
+    <section class="section" id="skills">
 
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills" class="section skills-section">
-
-        <div class="section-heading">
-
-            <p class="section-tag">
-                MY TOOLKIT
-            </p>
-
-            <h2>
-                Technologies I
-                <span>work with</span>
-            </h2>
-
-            <p>
-                Technologies and tools I'm currently learning
-            </p>
-
+        <div class="section-title reveal">
+            <p>MY TECHNOLOGY STACK</p>
+            <h2>Skills & <span>Learning</span></h2>
         </div>
-
 
         <div class="skills-grid">
 
-
-            <div class="skill-card">
-
-                <div class="skill-icon html">
-                    HTML
-                </div>
-
+            <div class="skill-card reveal">
+                <div class="skill-icon">🌐</div>
                 <h3>HTML</h3>
-
-                <p>
-                    Semantic and structured web development.
-                </p>
-
-                <div class="skill-bar">
-                    <span style="--width: 85%"></span>
+                <p>Building structured and semantic web pages.</p>
+                <div class="skill-level">
+                    <span style="width:80%"></span>
                 </div>
-
                 <small>Learning Progress</small>
-
             </div>
 
-
-            <div class="skill-card">
-
-                <div class="skill-icon css">
-                    CSS
-                </div>
-
+            <div class="skill-card reveal">
+                <div class="skill-icon">🎨</div>
                 <h3>CSS</h3>
-
-                <p>
-                    Responsive layouts, animations and styling.
-                </p>
-
-                <div class="skill-bar">
-                    <span style="--width: 80%"></span>
+                <p>Responsive layouts, animations and modern UI.</p>
+                <div class="skill-level">
+                    <span style="width:75%"></span>
                 </div>
-
                 <small>Learning Progress</small>
-
             </div>
 
-
-            <div class="skill-card">
-
-                <div class="skill-icon js">
-                    JS
-                </div>
-
+            <div class="skill-card reveal">
+                <div class="skill-icon">⚡</div>
                 <h3>JavaScript</h3>
-
-                <p>
-                    Programming logic and DOM manipulation.
-                </p>
-
-                <div class="skill-bar">
-                    <span style="--width: 70%"></span>
+                <p>Learning programming logic and DOM manipulation.</p>
+                <div class="skill-level">
+                    <span style="width:65%"></span>
                 </div>
-
                 <small>Learning Progress</small>
-
             </div>
 
-
-            <div class="skill-card">
-
-                <div class="skill-icon git">
-                    Git
-                </div>
-
+            <div class="skill-card reveal">
+                <div class="skill-icon">🔀</div>
                 <h3>Git & GitHub</h3>
-
-                <p>
-                    Version control and project workflows.
-                </p>
-
-                <div class="skill-bar">
-                    <span style="--width: 65%"></span>
+                <p>Version control, repositories, branches and GitHub Pages.</p>
+                <div class="skill-level">
+                    <span style="width:65%"></span>
                 </div>
-
                 <small>Learning Progress</small>
-
             </div>
 
-
-            <div class="skill-card">
-
-                <div class="skill-icon snow">
-                    SN
-                </div>
-
+            <div class="skill-card reveal">
+                <div class="skill-icon">⚙️</div>
                 <h3>ServiceNow</h3>
-
-                <p>
-                    ITSM and ServiceNow development concepts.
-                </p>
-
-                <div class="skill-bar">
-                    <span style="--width: 70%"></span>
+                <p>Learning platform development and administration.</p>
+                <div class="skill-level">
+                    <span style="width:60%"></span>
                 </div>
-
                 <small>Learning Progress</small>
-
             </div>
 
-
-            <div class="skill-card">
-
-                <div class="skill-icon sql">
-                    SQL
-                </div>
-
+            <div class="skill-card reveal">
+                <div class="skill-icon">🗄️</div>
                 <h3>SQL</h3>
-
-                <p>
-                    Database concepts and SQL queries.
-                </p>
-
-                <div class="skill-bar">
-                    <span style="--width: 60%"></span>
+                <p>Learning queries, tables, filtering and database concepts.</p>
+                <div class="skill-level">
+                    <span style="width:60%"></span>
                 </div>
-
                 <small>Learning Progress</small>
-
             </div>
 
         </div>
@@ -478,212 +296,162 @@
     </section>
 
 
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
 
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects" class="section">
-
-        <div class="section-heading">
-
-            <p class="section-tag">
-                MY WORK
-            </p>
-
-            <h2>
-                Featured
-                <span>Projects</span>
-            </h2>
-
-            <p>
-                Things I've built while learning
-            </p>
-
+        <div class="section-title reveal">
+            <p>WHAT I'M BUILDING</p>
+            <h2>My <span>Projects</span></h2>
         </div>
-
 
         <div class="projects-grid">
 
+            <div class="project-card reveal">
 
-            <!-- Project 1 -->
+                <div class="project-number">01</div>
 
-            <article class="project-card">
+                <div class="project-icon">🌐</div>
 
-                <div class="project-number">
-                    01
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A responsive animated portfolio website created
+                    using HTML, CSS and JavaScript and deployed using
+                    GitHub Pages.
+                </p>
+
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>GitHub</span>
                 </div>
 
-                <div class="project-content">
+                <a href="https://saikum441-rgb.github.io/Portfolio/"
+                   target="_blank"
+                   class="project-link">
+                    Live Website →
+                </a>
 
-                    <span class="project-type">
-                        WEB DEVELOPMENT
-                    </span>
+            </div>
 
-                    <h3>
-                        Personal Portfolio
-                    </h3>
 
-                    <p>
-                        A modern responsive portfolio website built
-                        using HTML, CSS and JavaScript.
-                    </p>
+            <div class="project-card reveal">
 
-                    <div class="tech-stack">
+                <div class="project-number">02</div>
 
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                <div class="project-icon">⚙️</div>
 
-                    </div>
+                <h3>ServiceNow Practice</h3>
 
-                    <a
-                        href="https://github.com/saikum441-rgb"
-                        target="_blank"
-                        class="project-link">
+                <p>
+                    Hands-on learning and practice with ServiceNow
+                    tables, forms, client scripts, business rules,
+                    GlideRecord and other platform concepts.
+                </p>
 
-                        View on GitHub →
-
-                    </a>
-
+                <div class="project-tags">
+                    <span>ServiceNow</span>
+                    <span>JavaScript</span>
                 </div>
 
-            </article>
+                <span class="project-link">
+                    In Progress →
+                </span>
+
+            </div>
 
 
+            <div class="project-card reveal">
 
-            <!-- Project 2 -->
+                <div class="project-number">03</div>
 
-            <article class="project-card">
+                <div class="project-icon">💻</div>
 
-                <div class="project-number">
-                    02
+                <h3>JavaScript Practice</h3>
+
+                <p>
+                    A collection of JavaScript exercises and mini
+                    projects created while learning programming logic,
+                    arrays, functions and DOM manipulation.
+                </p>
+
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>DOM</span>
+                    <span>Logic</span>
                 </div>
 
-                <div class="project-content">
+                <span class="project-link">
+                    In Progress →
+                </span>
 
-                    <span class="project-type">
-                        JAVASCRIPT
-                    </span>
-
-                    <h3>
-                        JavaScript Practice Projects
-                    </h3>
-
-                    <p>
-                        A collection of JavaScript exercises and
-                        interactive projects covering programming
-                        logic and DOM manipulation.
-                    </p>
-
-                    <div class="tech-stack">
-
-                        <span>JavaScript</span>
-                        <span>DOM</span>
-                        <span>HTML</span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/saikum441-rgb"
-                        target="_blank"
-                        class="project-link">
-
-                        View on GitHub →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- Project 3 -->
-
-            <article class="project-card">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <div class="project-content">
-
-                    <span class="project-type">
-                        SERVICENOW
-                    </span>
-
-                    <h3>
-                        ServiceNow Practice
-                    </h3>
-
-                    <p>
-                        Hands-on ServiceNow practice covering
-                        tables, client scripts, business rules,
-                        GlideRecord and ACL concepts.
-                    </p>
-
-                    <div class="tech-stack">
-
-                        <span>ServiceNow</span>
-                        <span>GlideRecord</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-                    <a
-                        href="https://github.com/saikum441-rgb"
-                        target="_blank"
-                        class="project-link">
-
-                        View on GitHub →
-
-                    </a>
-
-                </div>
-
-            </article>
+            </div>
 
         </div>
 
     </section>
 
 
+    <!-- EDUCATION -->
+    <section class="section" id="education">
 
-    <!-- ================= EDUCATION ================= -->
-
-    <section id="education" class="section education-section">
-
-        <div class="section-heading">
-
-            <p class="section-tag">
-                EDUCATION
-            </p>
-
-            <h2>
-                My
-                <span>Education</span>
-            </h2>
-
+        <div class="section-title reveal">
+            <p>MY BACKGROUND</p>
+            <h2>Education & <span>Journey</span></h2>
         </div>
-
 
         <div class="timeline">
 
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
 
                 <div class="timeline-dot"></div>
 
                 <div class="timeline-content">
 
-                    <span>
-                        Bachelor's Degree
+                    <span class="timeline-date">
+                        Graduation
                     </span>
 
                     <h3>
                         Computer Science
                     </h3>
 
-                    <p>
+                    <h4>
                         R.K. Degree College, Vizianagaram
+                    </h4>
+
+                    <p>
+                        Completed graduation in the Computer Science stream
+                        and developed an interest in technology and IT.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        Current Focus
+                    </span>
+
+                    <h3>
+                        IT Skill Development
+                    </h3>
+
+                    <h4>
+                        Self Learning & Practical Projects
+                    </h4>
+
+                    <p>
+                        Currently strengthening skills in web development,
+                        JavaScript, Git/GitHub, SQL and ServiceNow.
                     </p>
 
                 </div>
@@ -695,52 +463,47 @@
     </section>
 
 
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
 
-    <!-- ================= CONTACT ================= -->
+        <div class="contact-box reveal">
 
-    <section id="contact" class="section contact-section">
+            <div class="contact-content">
 
-        <div class="contact-box">
-
-            <div class="section-heading">
-
-                <p class="section-tag">
-                    GET IN TOUCH
+                <p class="contact-small">
+                    LET'S CONNECT
                 </p>
 
                 <h2>
                     Let's build something
-                    <span>great</span>
+                    <span>amazing.</span>
                 </h2>
 
                 <p>
-                    I'm always interested in learning,
-                    building and connecting with people
-                    in the technology industry.
+                    I'm always interested in learning, collaborating
+                    and connecting with people in the technology field.
                 </p>
 
-            </div>
+                <div class="contact-buttons">
 
+                    <a href="mailto:saikum441@gmail.com"
+                       class="btn primary-btn">
+                        ✉️ Contact Me
+                    </a>
 
-            <div class="contact-buttons">
+                    <a href="https://github.com/saikum441-rgb"
+                       target="_blank"
+                       class="btn secondary-btn">
+                        GitHub
+                    </a>
 
-                <a
-                    href="mailto:saikum441@gmail.com"
-                    class="btn primary-btn">
+                    <a href="https://www.linkedin.com/"
+                       target="_blank"
+                       class="btn secondary-btn">
+                        LinkedIn
+                    </a>
 
-                    Email Me →
-
-                </a>
-
-
-                <a
-                    href="https://github.com/saikum441-rgb"
-                    target="_blank"
-                    class="btn outline-btn">
-
-                    GitHub ↗
-
-                </a>
+                </div>
 
             </div>
 
@@ -749,26 +512,19 @@
     </section>
 
 
-
-    <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer>
 
-        <div class="footer-content">
+        <div class="footer-logo">
+            <span>&lt;</span>SK<span>/&gt;</span>
+        </div>
 
-            <div class="footer-logo">
-                SK
-            </div>
+        <p>
+            © 2026 Sai Kumar Suvvada. Built with HTML, CSS & JavaScript.
+        </p>
 
-            <p>
-                Designed & built by
-                <strong>Sai Kumar Suvvada</strong>
-            </p>
-
-            <p class="copyright">
-                © 2026 Sai Kumar Suvvada
-            </p>
-
+        <div class="footer-links">
+            <a href="#home">↑ Back to top</a>
         </div>
 
     </footer>
@@ -777,5 +533,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>

@@ -1,20 +1,20 @@
-/* =========================================
-   TYPING ANIMATION
-========================================= */
+// ===============================
+// TYPING ANIMATION
+// ===============================
 
 const typingElement = document.getElementById("typing");
 
 const words = [
-    "IT Professional",
-    "Web Developer",
+    "Aspiring IT Professional",
+    "Web Development Learner",
     "JavaScript Learner",
-    "ServiceNow Learner"
+    "ServiceNow Learner",
+    "Technology Enthusiast"
 ];
 
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
-
 
 function typeEffect() {
 
@@ -31,8 +31,7 @@ function typeEffect() {
 
             deleting = true;
 
-            setTimeout(typeEffect, 1500);
-
+            setTimeout(typeEffect, 1800);
             return;
         }
 
@@ -52,64 +51,44 @@ function typeEffect() {
             if (wordIndex >= words.length) {
                 wordIndex = 0;
             }
-
         }
-
     }
 
-    setTimeout(
-        typeEffect,
-        deleting ? 50 : 100
-    );
+    setTimeout(typeEffect, deleting ? 50 : 90);
 }
-
 
 typeEffect();
 
 
-
-/* =========================================
-   MOBILE MENU
-========================================= */
+// ===============================
+// MOBILE MENU
+// ===============================
 
 const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-const navLinks = document.querySelector(".nav-links");
-
-
-menuBtn.addEventListener("click", function () {
-
+menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
-
 });
 
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-/* Close menu after clicking a link */
-
-document.querySelectorAll(".nav-links a").forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
+    link.addEventListener("click", () => {
         navLinks.classList.remove("active");
-
     });
 
 });
 
 
+// ===============================
+// PARTICLES
+// ===============================
 
-/* =========================================
-   PARTICLES
-========================================= */
-
-const particlesContainer =
-    document.getElementById("particles");
-
+const particlesContainer = document.getElementById("particles");
 
 for (let i = 0; i < 45; i++) {
 
-    const particle =
-        document.createElement("div");
+    const particle = document.createElement("div");
 
     particle.classList.add("particle");
 
@@ -117,35 +96,30 @@ for (let i = 0; i < 45; i++) {
         Math.random() * 100 + "%";
 
     particle.style.animationDuration =
-        (Math.random() * 15 + 10) + "s";
+        (5 + Math.random() * 10) + "s";
 
     particle.style.animationDelay =
-        Math.random() * 10 + "s";
+        Math.random() * 8 + "s";
 
     particle.style.opacity =
-        Math.random() * 0.5 + 0.1;
+        Math.random();
 
     particlesContainer.appendChild(particle);
-
 }
 
 
-
-/* =========================================
-   SCROLL REVEAL
-========================================= */
+// ===============================
+// SCROLL REVEAL
+// ===============================
 
 const revealElements =
-    document.querySelectorAll(
-        ".section, .skill-card, .project-card"
-    );
-
+    document.querySelectorAll(".reveal");
 
 const observer =
     new IntersectionObserver(
-        function (entries) {
+        entries => {
 
-            entries.forEach(function (entry) {
+            entries.forEach(entry => {
 
                 if (entry.isIntersecting) {
 
@@ -161,30 +135,43 @@ const observer =
         }
     );
 
-
-revealElements.forEach(function (element) {
-
-    element.classList.add("reveal");
-
+revealElements.forEach(element => {
     observer.observe(element);
+});
+
+
+// ===============================
+// MOUSE CURSOR GLOW
+// ===============================
+
+const cursorGlow =
+    document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", event => {
+
+    cursorGlow.style.left =
+        event.clientX + "px";
+
+    cursorGlow.style.top =
+        event.clientY + "px";
 
 });
 
 
-
-/* =========================================
-   CARD MOUSE TILT
-========================================= */
+// ===============================
+// CARD TILT EFFECT
+// ===============================
 
 const cards =
     document.querySelectorAll(
-        ".skill-card, .project-card"
+        ".skill-card, .project-card, .stat-card"
     );
 
+cards.forEach(card => {
 
-cards.forEach(function (card) {
+    card.addEventListener("mousemove", event => {
 
-    card.addEventListener("mousemove", function (event) {
+        if (window.innerWidth < 700) return;
 
         const rect =
             card.getBoundingClientRect();
@@ -202,24 +189,105 @@ cards.forEach(function (card) {
             rect.height / 2;
 
         const rotateX =
-            (y - centerY) / 18;
+            ((y - centerY) / centerY) * -5;
 
         const rotateY =
-            (centerX - x) / 18;
+            ((x - centerX) / centerX) * 5;
 
         card.style.transform =
             `perspective(800px)
              rotateX(${rotateX}deg)
              rotateY(${rotateY}deg)
-             translateY(-8px)`;
+             translateY(-5px)`;
 
     });
 
+    card.addEventListener("mouseleave", () => {
 
-    card.addEventListener("mouseleave", function () {
+        card.style.transform = "";
 
-        card.style.transform =
-            "";
+    });
+
+});
+
+
+// ===============================
+// BUTTON RIPPLE EFFECT
+// ===============================
+
+document.querySelectorAll(".btn").forEach(button => {
+
+    button.addEventListener("click", function(event) {
+
+        const ripple =
+            document.createElement("span");
+
+        ripple.style.position = "absolute";
+        ripple.style.width = "10px";
+        ripple.style.height = "10px";
+        ripple.style.borderRadius = "50%";
+        ripple.style.background = "rgba(255,255,255,.4)";
+        ripple.style.transform = "translate(-50%, -50%)";
+        ripple.style.pointerEvents = "none";
+
+        const rect =
+            button.getBoundingClientRect();
+
+        ripple.style.left =
+            (event.clientX - rect.left) + "px";
+
+        ripple.style.top =
+            (event.clientY - rect.top) + "px";
+
+        button.style.position = "relative";
+        button.style.overflow = "hidden";
+
+        button.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 500);
+
+    });
+
+});
+
+
+// ===============================
+// ACTIVE NAVIGATION
+// ===============================
+
+const sections =
+    document.querySelectorAll("section");
+
+const navItems =
+    document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 200;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navItems.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
+            link.classList.add("active");
+        }
 
     });
 
